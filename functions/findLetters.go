@@ -1,5 +1,7 @@
 package functions
 
+import "log"
+
 // searches for the spaces between letters of the text file
 // once it's found an ascii letter it adds it to an array containing them
 func FindLetters(inputFileSplitByLine []string) {
@@ -20,5 +22,7 @@ func FindLetters(inputFileSplitByLine []string) {
 			}
 		}
 	}
-
+	if len(ExampleFileSplitByLetterByLine) == 0 {
+		log.Println("Error in FindLetters.go.  Couldn't find valid letters")
+	}
 }

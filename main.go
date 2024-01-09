@@ -11,5 +11,4 @@ func main() {
 	functions.FindLetters(exampleFileSplitByLine)
 	functions.ConvertLetters(referenceFileSplitByLine)
 	functions.PrintResult()
-
 }

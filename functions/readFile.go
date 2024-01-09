@@ -9,7 +9,8 @@ import (
 func ReadFile(fileName string) []byte {
 	file, err := os.ReadFile(fileName)
 	if err != nil {
-		log.Println("There's been a mistake reading the file in ReadFile.go!")
+		log.Println("Error reading filename in ReadFile.go!")
+		os.Exit(0)
 	}
 
 	return file

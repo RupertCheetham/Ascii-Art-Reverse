@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+// reads standard.txt and your chosen example.txt and returns them both as an array of strings
 func ProcessTxtFiles() ([]string, []string) {
 
 	var fileName string
@@ -24,6 +25,8 @@ func ProcessTxtFiles() ([]string, []string) {
 
 	referenceFileSplitByLine := strings.Split(string(referenceFile), "\n")
 	exampleFileSplitByLine := strings.Split(string(exampleFile), "\n")
+
+	ErrorChecker(exampleFileSplitByLine)
 
 	return referenceFileSplitByLine, exampleFileSplitByLine
 }
