@@ -6,7 +6,7 @@ var ExampleFileSplitByLetterByLine [][]string
 func UploadLetterToArray(letterNum int, inputFileSplitByLine []string, runeToStartAt int, runeToEndAt int) {
 	var asciiLetter []string
 	for i := 0; i < 6; i++ {
-		asciiLetter = append(asciiLetter, string(inputFileSplitByLine[i][runeToStartAt:runeToEndAt])+" ")
+		asciiLetter = append(asciiLetter, string(inputFileSplitByLine[i][runeToStartAt:runeToEndAt+1]))
 	}
 	ExampleFileSplitByLetterByLine = append(ExampleFileSplitByLetterByLine, asciiLetter)
 }

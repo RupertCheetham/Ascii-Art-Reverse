@@ -2,7 +2,6 @@ package main
 
 import (
 	"asciiReverse/functions"
-	"fmt"
 )
 
 func main() {
@@ -11,5 +10,6 @@ func main() {
 
 	functions.FindLetters(inputFileSplitByLine)
 	functions.ConvertLetters(referenceFileSplitByLine)
-	fmt.Println("result:", string(functions.Result))
+	functions.PrintResult()
+
 }
