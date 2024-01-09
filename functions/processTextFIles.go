@@ -1,17 +1,24 @@
 package functions
 
 import (
+	"flag"
+	"fmt"
 	"os"
 	"strings"
 )
 
-func ProcessTextFiles() ([]string, []string) {
+func ProcessTxtFiles() ([]string, []string) {
 
-	fileName := ""
+	var fileName string
 
-	if len(os.Args) > 0 {
-		fileName = os.Args[1]
+	flag.StringVar(&fileName, "reverse", "", "Specify the filename")
+	flag.Parse()
+
+	if fileName == "" {
+		fmt.Println("Error: Please provide a filename using the --reverse flag.")
+		os.Exit(1)
 	}
+
 	referenceFile := ReadFile("textFiles/standard.txt")
 	exampleFile := ReadFile("textFiles/" + fileName)
 

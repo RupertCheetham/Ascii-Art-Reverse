@@ -6,9 +6,9 @@ import (
 
 func main() {
 
-	referenceFileSplitByLine, inputFileSplitByLine := functions.ProcessTextFiles()
+	referenceFileSplitByLine, exampleFileSplitByLine := functions.ProcessTxtFiles()
 
-	functions.FindLetters(inputFileSplitByLine)
+	functions.FindLetters(exampleFileSplitByLine)
 	functions.ConvertLetters(referenceFileSplitByLine)
 	functions.PrintResult()
 
