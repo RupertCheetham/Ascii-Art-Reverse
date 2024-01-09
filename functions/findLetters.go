@@ -13,10 +13,11 @@ func FindLetters(inputFileSplitByLine []string) {
 				UploadLetterToArray(letterNum, inputFileSplitByLine, letterStart, i)
 				letterStart = i + 1
 				letterNum++
-				// if TheresASpace(inputFileSplitByLine, i) {
-				// 	letterStart = letterStart + 6
-				// 	letterNum++
-				// }
+				if i+5 < len(firstLineOfInput)-1 && TheresASpace(inputFileSplitByLine, i) {
+					letterStart = letterStart + 5
+					letterNum++
+				}
+
 			}
 		}
 	}
